@@ -1,7 +1,27 @@
-import React from "react";
+import React from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import './global.css';
+
+import Routes from './routes';
 
 function App() {
-  return <h1>Olá Mundo</h1>;
+  return (
+    <>
+      <Routes />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick={false}
+        rtl={false}
+        pauseOnVisibilityChange
+        draggable
+        pauseOnHover
+      />
+    </>
+  );
 }
 
 export default App;
