@@ -10,6 +10,7 @@ function App() {
     <>
       <Routes />
       <ToastContainer
+        className="toast"
         position="top-right"
         autoClose={5000}
         hideProgressBar

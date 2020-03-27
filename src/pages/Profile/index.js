@@ -91,6 +91,8 @@ export default function Profile() {
             </button>
           </li>
         ))}
+
+        {incidents.length === 0 && <p>Você não tem nenhum caso cadastrado.</p>}
       </ul>
     </Container>
   );

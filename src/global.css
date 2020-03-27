@@ -109,3 +109,11 @@ form textarea::placeholder {
 .back-link svg {
   margin-right: 8px;
 }
+
+.toast .Toastify__toast {
+  border-radius: 8px;
+  padding: 8px 15px 8px 25px;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}

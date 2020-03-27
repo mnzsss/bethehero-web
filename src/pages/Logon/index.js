@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiLogIn } from 'react-icons/fi';
 import { Link, useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -13,6 +13,14 @@ import { Container } from './styles';
 export default function Logon() {
   const [id, setId] = useState();
   const history = useHistory();
+
+  useEffect(() => {
+    const isLogged = localStorage.getItem('@BeTheHero:ongId');
+
+    if (isLogged) {
+      history.push('/profile');
+    }
+  }, [history]);
 
   async function handleLogin(e) {
     e.preventDefault();
